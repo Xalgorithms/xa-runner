@@ -7,23 +7,23 @@ ATTACH http://localhost:4000 AS xalgo
 ## external - tables
 
 # tables provided by base XA system for membership in international orgs
-PULL xalgo:waemu_members:1 AS waemu_members
-PULL xalgo:eu_members:1 AS eu_members
+PULL xalgo:waemu_members:[waemu_members_version] AS waemu_members
+PULL xalgo:eu_members:[eu_members_version] AS eu_members
 
 # mapping tables provided by XA system
-PULL xalgo:unspsc_to_hs:1 AS unspsc_to_hs
+PULL xalgo:unspsc_to_hs:[unspsc_to_hs_version] AS unspsc_to_hs
 
 # EU taxation tables
-PULL eu_taxation:eu_vat_internal:1 AS eu_vat_internal
-PULL eu_taxation:eu_vat_external:1 AS eu_vat_external
-PULL eu_taxation:eu_escalation:1 AS eu_escalation
+PULL eu_taxation:eu_vat_internal:[eu_vat_internal_version] AS eu_vat_internal
+PULL eu_taxation:eu_vat_external:[eu_vat_external_version] AS eu_vat_external
+PULL eu_taxation:eu_escalation:[eu_escalation_version] AS eu_escalation
 
 # WAEMU taxation tables
-PULL waemu_taxation:waemu_cet:1 AS waemu_cet
+PULL waemu_taxation:waemu_cet:[waemu_cet_version] AS waemu_cet
 
 # MALI taxation tables
-PULL mali_taxation:mali_st:1 AS mali_st
-PULL mali_taxation:mali_csl:1 AS mali_csl
+PULL mali_taxation:mali_st:[mali_st_version] AS mali_st
+PULL mali_taxation:mali_csl:[mali_csl_version] AS mali_csl
 
 ## imports finished - computation follows
 
