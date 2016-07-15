@@ -29,7 +29,17 @@ rule_content = cl.rules(*rule_ref.split(/:/))
 
 if rule_content
   puts "> Executing rule"
-  interpret_execute(rule_content, tables) do |res|
+  interpret_execute(rule_content, tables) do |exec_res|
+    puts ">> result: #{exec_res.status}"
+    if exec_res.status == :ok
+      puts '>> result tables'
+      exec_res.tables.each do |n, content|
+        puts ">>> #{n}"
+        content.each do |r|
+          puts ">>>> #{r}"
+        end
+      end
+    end
   end
 else
   puts "! failed to download rule"
