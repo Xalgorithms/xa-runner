@@ -25,7 +25,7 @@ end
 
 puts "> Getting remote rule (#{rule_ref}) from #{registry}"
 cl = XA::Registry::Client.new(registry)
-rule_content = cl.rules(*rule_ref.split(/:/))
+rule_content = cl.rule_by_reference(*rule_ref.split(/:/))
 
 if rule_content
   puts "> Executing rule"
