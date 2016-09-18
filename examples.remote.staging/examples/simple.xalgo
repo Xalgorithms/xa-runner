@@ -1,0 +1,17 @@
+EXPECTS simple[price, code]
+
+# this namespace is REQUIRED to look up nses below -- seems weird now
+ATTACH https://xa-registry.herokuapp.com/ AS examples
+
+# very bad things happen when you get namespaces wrong (missing tables)
+PULL examples:percent_by_code:{percent_by_code_version} AS percent_by_code
+
+PUSH simple
+PUSH percent_by_code
+
+JOIN USING [[code], [code]] INCLUDE [percent]
+ACCUMULATE price USING mult(percent) AS final_price
+COMMIT final_pricing[final_price]
+
+
+
