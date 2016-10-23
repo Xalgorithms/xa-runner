@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Xalgorithms/xa-rules.git
-  revision: 4f6f08bb403b94d615055de46a12506357e03fc1
+  revision: 527d61e593db1aaf4cec2cca10b0b77f1b993c40
   specs:
     xa-rules (0.0.5)
       faraday
@@ -27,5 +27,8 @@ DEPENDENCIES
   multi_json
   xa-rules!
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.11.2
+   1.13.2
