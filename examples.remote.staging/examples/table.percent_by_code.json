@@ -1,5 +1,5 @@
 [
-    { "code" : "C62", "percent" : 1.27 },
-    { "code" : "EA", "percent" : 1.4 },
-    { "code" : "KGM", "percent" : 1.2 }
+    { "code" : "C62", "percent" : 30 },
+    { "code" : "EA", "percent" : 20 },
+    { "code" : "KGM", "percent" : 10 }
 ]
